@@ -1,6 +1,9 @@
+# pyrefly: ignore [missing-import]
 import cv2
 
 cap = cv2.VideoCapture("video.mp4")
+fps= cap.get(cv2.CAP_PROP_FPS)
+print("FPS",fps)
 x=100
 y=100
 dx = 2
@@ -23,6 +26,8 @@ while cap.isOpened():
         dx=punto_actual[0]-punto_anterior[0]
         dy=punto_actual[1]-punto_anterior[1]
         distancia = (dx**2 + dy**2)**0.5
+        velocidad = distancia * fps
+        print("Velocidad", velocidad,"pixeles por segundo")
         print("Movimiento",distancia)
         for i in range(1,len(trayectoria)):
             cv2.line(im, trayectoria[i-1], trayectoria[i], (255, 255, 0),2)

@@ -1,5 +1,31 @@
-video.mp4
+# Python
 __pycache__/
-*.pyc
-.env
-.conda/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Conda
+*.conda
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Video files
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# YOLO / generated files
+runs/
