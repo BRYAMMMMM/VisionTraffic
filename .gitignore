@@ -28,4 +28,5 @@ env/
 *.mkv
 
 # YOLO / generated files
-runs/*.pt
+*.pt
+runs/
